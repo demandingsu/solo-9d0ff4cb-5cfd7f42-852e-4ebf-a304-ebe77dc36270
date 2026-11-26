@@ -1,0 +1,13 @@
+services:
+  screenshop:
+    build: .
+    image: screenshop:1.0.0
+    container_name: screenshop
+    ports:
+      - "8000:8000"
+    volumes:
+      - screenshop-data:/data
+    restart: unless-stopped
+
+volumes:
+  screenshop-data:
